@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 
 const studentSchema = new mongoose.Schema(
@@ -14,6 +15,21 @@ const studentSchema = new mongoose.Schema(
             trim: true
         },
 
+        course: {
+            type: String,
+            default: ""
+        },
+
+        admissionDate: {
+            type: Date,
+            default: null
+        },
+
+        passingDate: {
+            type: Date,
+            default: null
+        },
+
         feesPaid: {
             type: Number,
             required: true,
@@ -24,6 +40,16 @@ const studentSchema = new mongoose.Schema(
             type: Number,
             required: true,
             default: 0
+        },
+
+        photoUrl: {
+            type: String,
+            default: ""
+        },
+
+        certificateUrl: {
+            type: String,
+            default: ""
         }
     },
     {
